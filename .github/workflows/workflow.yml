@@ -24,6 +24,7 @@ jobs:
         uses: testspace-com/setup-testspace@v1
         with:
           domain: ${{github.repository_owner}}
+        if: always()
       - name: publish test results
         run: testspace .testresults/xunit.xml
         if: always()
