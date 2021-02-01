@@ -3,11 +3,9 @@
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pretest": "rimraf .testresults",
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -18,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/calebcartwright/shields-service-test-target/issues"
   },
-  "homepage": "https://github.com/calebcartwright/shields-service-test-target#readme"
+  "homepage": "https://github.com/calebcartwright/shields-service-test-target#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1",
+    "mocha-multi-reporters": "^1.5.1",
+    "rimraf": "^3.0.2"
+  }
 }
